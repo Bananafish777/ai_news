@@ -1,0 +1,116 @@
+.article {
+    max-width: 100%;
+}
+
+.header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.tag {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: 0.5px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+}
+
+.meta {
+    display: flex;
+    gap: var(--spacing-md);
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-lg);
+}
+
+.author {
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.imageWrapper {
+    width: 100%;
+    margin-bottom: var(--spacing-xl);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+}
+
+.featuredImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mediaGallery {
+    margin-top: var(--spacing-xl);
+}
+
+.mediaGallery h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+}
+
+.galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.galleryImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius-md);
+    transition: transform 0.2s;
+}
+
+.galleryImage:hover {
+    transform: scale(1.02);
+}
+
+.content {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.content p {
+    margin-bottom: var(--spacing-lg);
+}
+
+.content h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.footer {
+    margin-top: var(--spacing-xxl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+.tags {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.tagItem {
+    background: var(--color-surface);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}

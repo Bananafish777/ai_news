@@ -1,0 +1,116 @@
+.cardWrapper {
+    position: relative;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.cardWrapper:last-child {
+    border-bottom: none;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-lg) 0;
+    gap: var(--spacing-lg);
+    text-decoration: none;
+    color: inherit;
+    /* Ensure content doesn't overlap absolute button if it's long, add padding-right to meta? */
+}
+
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.meta {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    padding-right: 40px;
+    /* Space for bookmark button */
+}
+
+.source {
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.3;
+    color: var(--color-text-main);
+}
+
+.card:hover .title {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
+.summary {
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.imageWrapper {
+    width: 200px;
+    height: 120px;
+    background-color: #eee;
+    border-radius: var(--border-radius-md);
+    flex-shrink: 0;
+}
+
+.bookmarkBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 8px;
+    color: var(--color-text-secondary);
+    transition: all 0.2s;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 24px;
+    /* match padding-top of card (~ var(--spacing-lg)) */
+    right: 0;
+    z-index: 5;
+}
+
+.bookmarkBtn:hover {
+    color: var(--color-primary);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.bookmarkBtn:active {
+    transform: scale(0.9);
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column-reverse;
+    }
+
+    .imageWrapper {
+        width: 100%;
+        height: 180px;
+    }
+}

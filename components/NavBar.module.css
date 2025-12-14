@@ -1,0 +1,129 @@
+.header {
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-background);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: -0.5px;
+}
+
+.nav {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.navLink {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-text-main);
+    padding: 8px 12px;
+    border-radius: var(--border-radius-sm);
+    transition: background-color 0.2s;
+}
+
+.navLink:hover {
+    background-color: var(--color-surface);
+}
+
+.userActions {
+    display: flex;
+    align-items: center;
+}
+
+.loginBtn {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background-color: var(--color-primary);
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+}
+
+.loginBtn:hover {
+    background-color: #000000;
+    opacity: 0.9;
+}
+
+/* User Menu Container for Hover Effect */
+.userMenu {
+    position: relative;
+    padding: 8px 0;
+    /* Adds some vertical buffer for easier hovering */
+}
+
+.userAvatar {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 140px;
+    background-color: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+    padding: 4px;
+    /* Bridge the gap so hover isn't lost */
+    margin-top: 0px;
+}
+
+/* Show on hover of parent .userMenu */
+.userMenu:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.logoutBtn {
+    width: 100%;
+    padding: 8px 12px;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--color-text-main);
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+
+.logoutBtn:hover {
+    background-color: #fee2e2;
+    /* Light red background */
+    color: #dc2626;
+    /* Red text */
+}
