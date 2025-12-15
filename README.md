@@ -129,6 +129,8 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+** Note: ** the backend structure was deployed on Render remotely as a free instance, the service might be halted due to long time inactivity. Please contact us when the service stopped.
+
 ## Project Structure
 
 ### Frontend
