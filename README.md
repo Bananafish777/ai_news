@@ -1,4 +1,9 @@
 # AI News Platform
+  * Final project for CS9053, Intro to Java
+  * Group member:
+    * Hongyuan Luo  (hl5794)
+    * Yi Gao        (yg3414)
+  * New York University, Tandon School of Engineering
 
 A modern, AI-powered news aggregation platform built with Next.js 16 and React 19. This application delivers a premium reading experience with real-time AI capabilities, including personalized article recommendations and an interactive AI chat assistant.
 
