@@ -23,8 +23,6 @@ Available at https://drive.google.com/file/d/1d25uVXpGgnw7cKtHtVXIRj-DZrfDjmh2/v
 *   **Premium Aesthetics**: Custom CSS modules offering a sleek, glassmorphism-inspired design.
 *   **Interactive Components**: Smooth transitions and engagement-focused micro-interactions.
 
-## Advanced Features
-
 ## Tech Stack
 
 ---
@@ -88,11 +86,6 @@ Available at https://drive.google.com/file/d/1d25uVXpGgnw7cKtHtVXIRj-DZrfDjmh2/v
   - Frontend uses `.env.local` (not committed)  
 
 ---
-
-
-## Tech Stack
-
-
 
 ## Getting Started
 
