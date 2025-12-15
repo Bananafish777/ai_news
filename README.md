@@ -2,6 +2,10 @@
 
 A modern, AI-powered news aggregation platform built with Next.js 16 and React 19. This application delivers a premium reading experience with real-time AI capabilities, including personalized article recommendations and an interactive AI chat assistant.
 
+## 📺 Project demo video
+
+Available at https://drive.google.com/file/d/1d25uVXpGgnw7cKtHtVXIRj-DZrfDjmh2/view?usp=sharing
+
 ## Features
 
 ### Core Experience
@@ -21,15 +25,74 @@ A modern, AI-powered news aggregation platform built with Next.js 16 and React 1
 
 ## Advanced Features
 
-
-
 ## Tech Stack
 
+---
+
+## **Frontend**
 *   **Framework**: Next.js 16
 *   **Library**: React 19
 *   **Language**: TypeScript
 *   **Styling**: CSS Modules
 *   **AI SDK**: Google GenAI SDK (`@google/genai`)
+
+---
+
+## **Backend (Java / Spring Boot)**  
+
+### **Core Technologies**
+- **Language**: Java 21  
+- **Framework**: Spring Boot 3  
+- **Build Tool**: Maven  
+
+### **Web & Servlet Layer**
+- **Spring MVC (Servlet-based)** to build RESTful APIs.
+- **Servlet fundamentals**  
+  - request → filter chain → servlet → response 
+  - servlet thread model  
+  - lifecycle & dispatching  
+- **HTTP / Networking Layer**
+  - HTTP/1.1 request–response model
+  - CORS policies  
+  - Stateless JWT authentication  
+  - Java `HttpClient` for external news API & RSS fetching  
+
+### **Security**
+- Spring Security 6  
+- JWT-based authentication  
+- Password Encoding (BCrypt)  
+- CORS + CSRF policies  
+
+### **Database & Persistence**
+- **PostgreSQL** (Render-hosted)  
+- Spring Data JPA / Hibernate ORM  
+- Migrations via Flyway  
+- Connection pooling (HikariCP)  
+
+### **Business Logic Layer**
+- News aggregation pipeline (fetch → normalize → dedupe → persist)  
+- Topic–article mapping  
+- User follow / notification subsystem  
+- Scheduled tasks (Spring Scheduling)  
+
+
+## **DevOps / Deployment**
+- **Render Cloud**:  
+  - Backend deployed as a Render Web Service  
+  - Database deployed as Render PostgreSQL Instance  
+- **Local Development**  
+  - Frontend: `npm run dev` → http://localhost:3000  
+  - Backend (remote): base URL provided via `NEXT_PUBLIC_API_BASE_URL`  
+- **Environment Configurations**
+  - Backend uses Render Environment Variables  
+  - Frontend uses `.env.local` (not committed)  
+
+---
+
+
+## Tech Stack
+
+
 
 ## Getting Started
 
@@ -75,6 +138,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Project Structure
 
+### Frontend
+
 *   `app/`: App Router pages and API routes.
     *   `api/`: Backend proxy/logic (Chat, Articles, Auth).
     *   `articles/`: Article listing and detail pages.
@@ -83,3 +148,21 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 *   `lib/`: Utility functions and constants.
 *   `public/`: Static assets.
 *   `styles/`: Global styles and variables.
+
+### Backend: 
+* ai_news/backend/src/main/java/com/example/news_project
+  * `configuration/`: Global config (CORS, JWT filters, Web MVC settings)
+  * `controller/ `: REST API endpoints exposed to the frontend
+  * `dto/`: Request/response data models used by controllers
+  * `exception/`: Custom exceptions + global exception handler (ControllerAdvice)
+  * `model/`: JPA entity classes mapped to PostgreSQL tables    
+  * `security/`: Security configuration, JWT authentication, password encoding, filters, user details .etc
+  * `repository/`: Spring Data JPA repositories for database operations
+  * `service/`: Business logic layer
+
+* This structure ensures a clean separation between:
+    - **Web layer** (controllers & DTOs)  
+    - **Business logic** (services)  
+    - **Persistence** (models & repositories)  
+    - **Security** (JWT, filters, auth)  
+    - **Configuration** (CORS, scheduling, application-wide setups)
