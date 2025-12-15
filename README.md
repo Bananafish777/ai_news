@@ -161,3 +161,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
     - **Persistence** (models & repositories)  
     - **Security** (JWT, filters, auth)  
     - **Configuration** (CORS, scheduling, application-wide setups)
+
+## Project code
+Available at https://github.com/Bananafish777/ai_news.git
